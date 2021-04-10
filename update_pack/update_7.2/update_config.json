@@ -1,0 +1,75 @@
+{
+  "directory":
+  [],
+  "sql_file": "",
+  "files": [
+    {
+        "root_directory"    : "update/update_7.2/application/controllers/Home.php",
+        "update_directory"  : "application/controllers/Home.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/controllers/Superadmin.php",
+        "update_directory"  : "application/controllers/Superadmin.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/helpers/common_helper.php",
+        "update_directory"  : "application/helpers/common_helper.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/helpers/multi_language_helper.php",
+        "update_directory"  : "application/helpers/multi_language_helper.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/models/Crud_model.php",
+        "update_directory"  : "application/models/Crud_model.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/models/Frontend_model.php",
+        "update_directory"  : "application/models/Frontend_model.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/views/backend/modal.php",
+        "update_directory"  : "application/views/backend/modal.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/views/backend/navigation.php",
+        "update_directory"  : "application/views/backend/navigation.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/views/backend/superadmin/attendance/list.php",
+        "update_directory"  : "application/views/backend/superadmin/attendance/list.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/views/backend/superadmin/settings/system_settings.php",
+        "update_directory"  : "application/views/backend/superadmin/settings/system_settings.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/views/backend/superadmin/website_settings/create_gallery.php",
+        "update_directory"  : "application/views/backend/superadmin/website_settings/create_gallery.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/views/backend/superadmin/website_settings/general_settings.php",
+        "update_directory"  : "application/views/backend/superadmin/website_settings/general_settings.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/views/backend/superadmin/website_settings/homepage_slider.php",
+        "update_directory"  : "application/views/backend/superadmin/website_settings/homepage_slider.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/views/backend/superadmin/website_settings/index.php",
+        "update_directory"  : "application/views/backend/superadmin/website_settings/index.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/views/backend/superadmin/website_settings/other_settings.php",
+        "update_directory"  : "application/views/backend/superadmin/website_settings/other_settings.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/views/frontend/ultimate/contact.php",
+        "update_directory"  : "application/views/frontend/ultimate/contact.php"
+    },
+    {
+        "root_directory"    : "update/update_7.2/application/views/frontend/ultimate/footer.php",
+        "update_directory"  : "application/views/frontend/ultimate/footer.php"
+    }
+  ]
+}
