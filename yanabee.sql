@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2021 at 08:10 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 7.4.15
+-- Generation Time: Apr 11, 2021 at 08:40 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `addons` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `unique_identifier` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `version` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `unique_identifier` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `version` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `status` int(11) NOT NULL,
   `created_at` int(11) DEFAULT NULL,
   `updated_at` int(11) DEFAULT NULL
@@ -45,11 +45,11 @@ CREATE TABLE `addons` (
 
 CREATE TABLE `books` (
   `id` int(11) UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `author` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `author` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `copies` int(11) DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL,
-  `session` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `session` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -65,10 +65,10 @@ CREATE TABLE `book_issues` (
   `book_id` int(11) DEFAULT NULL,
   `class_id` int(11) DEFAULT NULL,
   `student_id` int(11) DEFAULT NULL,
-  `issue_date` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `issue_date` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `status` int(11) DEFAULT 0,
   `school_id` int(11) DEFAULT NULL,
-  `session` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `session` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -80,8 +80,8 @@ CREATE TABLE `book_issues` (
 --
 
 CREATE TABLE `ci_sessions` (
-  `id` varchar(40) CHARACTER SET utf8 DEFAULT NULL,
-  `ip_address` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
+  `id` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ip_address` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `timestamp` int(10) NOT NULL DEFAULT 0,
   `data` blob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -117,7 +117,9 @@ INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('mt4830uvoujunjdvftr06ru72mrv6ka8', '::1', 1618094854, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631383039343835343b757365725f6c6f67696e5f747970657c623a313b737570657261646d696e5f6c6f67696e7c623a313b757365725f69647c733a313a2231223b7363686f6f6c5f69647c733a313a2231223b757365725f6e616d657c733a31333a2241686d6564204d6f68616d6564223b757365725f747970657c733a31303a22737570657261646d696e223b),
 ('5vfgd94hrqgjapii0a80qp26cndds5hg', '::1', 1618095462, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631383039353436323b757365725f6c6f67696e5f747970657c623a313b737570657261646d696e5f6c6f67696e7c623a313b757365725f69647c733a313a2231223b7363686f6f6c5f69647c733a313a2231223b757365725f6e616d657c733a31333a2241686d6564204d6f68616d6564223b757365725f747970657c733a31303a22737570657261646d696e223b),
 ('3s2q1qa5mjq5djp3q326jdda8cvg1v5h', '::1', 1618096141, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631383039363134313b757365725f6c6f67696e5f747970657c623a313b737570657261646d696e5f6c6f67696e7c623a313b757365725f69647c733a313a2231223b7363686f6f6c5f69647c733a313a2231223b757365725f6e616d657c733a31333a2241686d6564204d6f68616d6564223b757365725f747970657c733a31303a22737570657261646d696e223b),
-('ilf1460sh6shrccgg3t50rhf6amfh1or', '::1', 1618096252, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631383039363134313b757365725f6c6f67696e5f747970657c623a313b737570657261646d696e5f6c6f67696e7c623a313b757365725f69647c733a313a2231223b7363686f6f6c5f69647c733a313a2231223b757365725f6e616d657c733a31333a2241686d6564204d6f68616d6564223b757365725f747970657c733a31303a22737570657261646d696e223b);
+('ilf1460sh6shrccgg3t50rhf6amfh1or', '::1', 1618096252, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631383039363134313b757365725f6c6f67696e5f747970657c623a313b737570657261646d696e5f6c6f67696e7c623a313b757365725f69647c733a313a2231223b7363686f6f6c5f69647c733a313a2231223b757365725f6e616d657c733a31333a2241686d6564204d6f68616d6564223b757365725f747970657c733a31303a22737570657261646d696e223b),
+('rfojs8k9coj3kko3d01i3dlurvkhmn7l', '::1', 1618165191, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631383136353139313b757365725f6c6f67696e5f747970657c623a313b737570657261646d696e5f6c6f67696e7c623a313b757365725f69647c733a313a2231223b7363686f6f6c5f69647c733a313a2231223b757365725f6e616d657c733a31333a2241686d6564204d6f68616d6564223b757365725f747970657c733a31303a22737570657261646d696e223b),
+('hq3g5bvni0s60br2r7l6g3jtfm6b8n6n', '::1', 1618165501, 0x5f5f63695f6c6173745f726567656e65726174657c693a313631383136353139313b757365725f6c6f67696e5f747970657c623a313b737570657261646d696e5f6c6f67696e7c623a313b757365725f69647c733a313a2231223b7363686f6f6c5f69647c733a313a2231223b757365725f6e616d657c733a31333a2241686d6564204d6f68616d6564223b757365725f747970657c733a31303a22737570657261646d696e223b);
 
 -- --------------------------------------------------------
 
@@ -127,7 +129,7 @@ INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 
 CREATE TABLE `classes` (
   `id` int(11) UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -149,7 +151,7 @@ INSERT INTO `classes` (`id`, `name`, `school_id`) VALUES
 
 CREATE TABLE `class_rooms` (
   `id` int(11) UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -161,8 +163,8 @@ CREATE TABLE `class_rooms` (
 
 CREATE TABLE `common_settings` (
   `id` int(11) NOT NULL,
-  `type` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `description` longtext CHARACTER SET utf8 DEFAULT NULL
+  `type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -182,9 +184,9 @@ INSERT INTO `common_settings` (`id`, `type`, `description`) VALUES
 
 CREATE TABLE `currencies` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `code` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `symbol` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `code` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `symbol` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `paypal_supported` int(11) DEFAULT NULL,
   `stripe_supported` int(11) DEFAULT NULL,
   `paystack_supported` int(11) DEFAULT 0,
@@ -317,12 +319,12 @@ INSERT INTO `currencies` (`id`, `name`, `code`, `symbol`, `paypal_supported`, `s
 
 CREATE TABLE `daily_attendances` (
   `id` int(11) NOT NULL,
-  `timestamp` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `timestamp` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `class_id` int(11) DEFAULT NULL,
   `section_id` int(11) DEFAULT NULL,
   `student_id` int(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
-  `session_id` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `session_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `school_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -341,7 +343,7 @@ INSERT INTO `daily_attendances` (`id`, `timestamp`, `class_id`, `section_id`, `s
 
 CREATE TABLE `departments` (
   `id` int(11) UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `school_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -364,7 +366,7 @@ CREATE TABLE `enrols` (
   `class_id` int(11) DEFAULT NULL,
   `section_id` int(11) DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL,
-  `session` varchar(255) CHARACTER SET utf8 DEFAULT NULL
+  `session` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
 
 --
@@ -421,7 +423,87 @@ INSERT INTO `enrols` (`id`, `student_id`, `class_id`, `section_id`, `school_id`,
 (47, 59, 1, 1, 1, '1'),
 (48, 60, 1, 1, 1, '1'),
 (49, 61, 1, 1, 1, '1'),
-(50, 62, 1, 1, 1, '1');
+(50, 62, 1, 1, 1, '1'),
+(51, 63, 1, 1, 1, '1'),
+(52, 64, 1, 1, 1, '1'),
+(53, 65, 1, 1, 1, '1'),
+(54, 66, 1, 1, 1, '1'),
+(55, 67, 1, 1, 1, '1'),
+(56, 68, 1, 1, 1, '1'),
+(57, 69, 1, 1, 1, '1'),
+(58, 70, 1, 1, 1, '1'),
+(59, 71, 1, 1, 1, '1'),
+(60, 72, 1, 1, 1, '1'),
+(61, 73, 1, 1, 1, '1'),
+(62, 74, 1, 1, 1, '1'),
+(63, 75, 1, 1, 1, '1'),
+(64, 76, 1, 1, 1, '1'),
+(65, 77, 1, 1, 1, '1'),
+(66, 78, 1, 1, 1, '1'),
+(67, 79, 1, 1, 1, '1'),
+(68, 80, 1, 1, 1, '1'),
+(69, 81, 1, 1, 1, '1'),
+(70, 82, 1, 1, 1, '1'),
+(71, 83, 1, 1, 1, '1'),
+(72, 84, 1, 1, 1, '1'),
+(73, 85, 1, 1, 1, '1'),
+(74, 86, 1, 1, 1, '1'),
+(75, 87, 1, 1, 1, '1'),
+(76, 88, 1, 1, 1, '1'),
+(77, 89, 1, 1, 1, '1'),
+(78, 90, 1, 1, 1, '1'),
+(79, 91, 1, 1, 1, '1'),
+(80, 92, 1, 1, 1, '1'),
+(81, 93, 1, 1, 1, '1'),
+(82, 94, 1, 1, 1, '1'),
+(83, 95, 1, 1, 1, '1'),
+(84, 96, 1, 1, 1, '1'),
+(85, 97, 1, 1, 1, '1'),
+(86, 98, 1, 1, 1, '1'),
+(87, 99, 1, 1, 1, '1'),
+(88, 100, 1, 1, 1, '1'),
+(89, 101, 1, 1, 1, '1'),
+(90, 102, 1, 1, 1, '1'),
+(91, 103, 1, 1, 1, '1'),
+(92, 104, 1, 1, 1, '1'),
+(93, 105, 1, 1, 1, '1'),
+(94, 106, 1, 1, 1, '1'),
+(95, 107, 1, 1, 1, '1'),
+(96, 108, 1, 1, 1, '1'),
+(97, 109, 1, 1, 1, '1'),
+(98, 110, 1, 1, 1, '1'),
+(99, 111, 1, 1, 1, '1'),
+(100, 112, 1, 1, 1, '1'),
+(101, 113, 1, 1, 1, '1'),
+(102, 114, 1, 1, 1, '1'),
+(103, 115, 1, 1, 1, '1'),
+(104, 116, 1, 1, 1, '1'),
+(105, 117, 1, 1, 1, '1'),
+(106, 118, 1, 1, 1, '1'),
+(107, 119, 1, 1, 1, '1'),
+(108, 120, 1, 1, 1, '1'),
+(109, 121, 1, 1, 1, '1'),
+(110, 122, 1, 1, 1, '1'),
+(111, 123, 1, 1, 1, '1'),
+(112, 124, 1, 1, 1, '1'),
+(113, 125, 1, 1, 1, '1'),
+(114, 126, 1, 1, 1, '1'),
+(115, 127, 1, 1, 1, '1'),
+(116, 128, 1, 1, 1, '1'),
+(117, 129, 1, 1, 1, '1'),
+(118, 130, 1, 1, 1, '1'),
+(119, 131, 1, 1, 1, '1'),
+(120, 132, 1, 1, 1, '1'),
+(121, 133, 1, 1, 1, '1'),
+(122, 134, 1, 1, 1, '1'),
+(123, 135, 1, 1, 1, '1'),
+(124, 136, 1, 1, 1, '1'),
+(125, 137, 1, 1, 1, '1'),
+(126, 138, 1, 1, 1, '1'),
+(127, 139, 1, 1, 1, '1'),
+(128, 140, 1, 1, 1, '1'),
+(129, 141, 1, 1, 1, '1'),
+(130, 142, 1, 1, 1, '1');
 
 -- --------------------------------------------------------
 
@@ -431,9 +513,9 @@ INSERT INTO `enrols` (`id`, `student_id`, `class_id`, `section_id`, `school_id`,
 
 CREATE TABLE `event_calendars` (
   `id` int(11) NOT NULL,
-  `title` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `starting_date` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `ending_date` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `title` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `starting_date` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ending_date` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `school_id` int(10) DEFAULT NULL,
   `session` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -446,11 +528,11 @@ CREATE TABLE `event_calendars` (
 
 CREATE TABLE `exams` (
   `id` int(11) UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `starting_date` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `ending_date` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `starting_date` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ending_date` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL,
-  `session` varchar(255) CHARACTER SET utf8 DEFAULT NULL
+  `session` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -463,9 +545,9 @@ CREATE TABLE `expenses` (
   `id` int(11) UNSIGNED NOT NULL,
   `expense_category_id` int(11) DEFAULT NULL,
   `date` int(11) DEFAULT NULL,
-  `amount` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `amount` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL,
-  `session` varchar(255) CHARACTER SET utf8 DEFAULT '',
+  `session` varchar(255) COLLATE utf8_unicode_ci DEFAULT '',
   `created_at` int(11) DEFAULT NULL,
   `updated_at` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -478,9 +560,9 @@ CREATE TABLE `expenses` (
 
 CREATE TABLE `expense_categories` (
   `id` int(11) UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL,
-  `session` varchar(255) CHARACTER SET utf8 DEFAULT NULL
+  `session` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -491,7 +573,7 @@ CREATE TABLE `expense_categories` (
 
 CREATE TABLE `frontend_events` (
   `frontend_events_id` int(11) NOT NULL,
-  `title` text CHARACTER SET utf8 DEFAULT NULL,
+  `title` text COLLATE utf8_unicode_ci DEFAULT NULL,
   `timestamp` int(11) NOT NULL,
   `status` int(11) NOT NULL DEFAULT 0 COMMENT '0-inactive, 1-active',
   `school_id` int(11) NOT NULL,
@@ -506,10 +588,10 @@ CREATE TABLE `frontend_events` (
 
 CREATE TABLE `frontend_gallery` (
   `frontend_gallery_id` int(11) NOT NULL,
-  `title` text CHARACTER SET utf8 DEFAULT NULL,
-  `description` longtext CHARACTER SET utf8 DEFAULT NULL,
+  `title` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
   `date_added` int(11) DEFAULT NULL,
-  `image` text CHARACTER SET utf8 DEFAULT NULL,
+  `image` text COLLATE utf8_unicode_ci DEFAULT NULL,
   `show_on_website` int(11) NOT NULL DEFAULT 0 COMMENT '0-no 1-yes',
   `school_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -523,8 +605,8 @@ CREATE TABLE `frontend_gallery` (
 CREATE TABLE `frontend_gallery_image` (
   `frontend_gallery_image_id` int(11) NOT NULL,
   `frontend_gallery_id` int(11) DEFAULT NULL,
-  `title` text CHARACTER SET utf8 DEFAULT NULL,
-  `image` text CHARACTER SET utf8 DEFAULT NULL
+  `title` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `image` text COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -535,17 +617,17 @@ CREATE TABLE `frontend_gallery_image` (
 
 CREATE TABLE `frontend_settings` (
   `id` int(11) NOT NULL,
-  `about_us` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `terms_conditions` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `privacy_policy` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `social_links` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `copyright_text` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `about_us_image` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `slider_images` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `theme` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `homepage_note_title` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `homepage_note_description` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `website_title` varchar(255) CHARACTER SET utf8 DEFAULT NULL
+  `about_us` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `terms_conditions` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `privacy_policy` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `social_links` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `copyright_text` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `about_us_image` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `slider_images` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `theme` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `homepage_note_title` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `homepage_note_description` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `website_title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -563,13 +645,13 @@ INSERT INTO `frontend_settings` (`id`, `about_us`, `terms_conditions`, `privacy_
 
 CREATE TABLE `grades` (
   `id` int(11) UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `grade_point` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `mark_from` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `mark_upto` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `comment` longtext CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `grade_point` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `mark_from` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `mark_upto` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `comment` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL,
-  `session` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `session` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -582,15 +664,15 @@ CREATE TABLE `grades` (
 
 CREATE TABLE `invoices` (
   `id` int(11) NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `total_amount` int(11) DEFAULT NULL,
   `class_id` int(11) DEFAULT NULL,
   `student_id` int(11) DEFAULT NULL,
-  `payment_method` longtext CHARACTER SET utf8 DEFAULT NULL,
+  `payment_method` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
   `paid_amount` int(11) DEFAULT NULL,
-  `status` longtext CHARACTER SET utf8 DEFAULT NULL,
+  `status` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL,
-  `session` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `session` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` int(11) DEFAULT NULL,
   `updated_at` int(11) DEFAULT NULL COMMENT 'This column is all about payment taking date'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -609,7 +691,7 @@ CREATE TABLE `marks` (
   `section_id` int(11) DEFAULT NULL,
   `exam_id` int(11) DEFAULT NULL,
   `mark_obtained` int(11) DEFAULT 0,
-  `comment` longtext CHARACTER SET utf8 DEFAULT NULL,
+  `comment` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
   `session` int(11) DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -622,10 +704,10 @@ CREATE TABLE `marks` (
 
 CREATE TABLE `menus` (
   `id` int(11) UNSIGNED NOT NULL,
-  `displayed_name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `route_name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `displayed_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `route_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `parent` int(11) DEFAULT NULL,
-  `icon` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `icon` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `status` int(11) DEFAULT 1,
   `superadmin_access` int(11) NOT NULL DEFAULT 0,
   `admin_access` int(11) NOT NULL DEFAULT 0,
@@ -636,7 +718,7 @@ CREATE TABLE `menus` (
   `librarian_access` int(11) NOT NULL DEFAULT 0,
   `sort_order` int(11) NOT NULL,
   `is_addon` int(11) NOT NULL DEFAULT 0 COMMENT 'If the value is 1 that means its an addon.',
-  `unique_identifier` varchar(255) CHARACTER SET utf8 DEFAULT NULL COMMENT 'It is mandatory for addons'
+  `unique_identifier` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'It is mandatory for addons'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
 
 --
@@ -710,12 +792,12 @@ INSERT INTO `menus` (`id`, `displayed_name`, `route_name`, `parent`, `icon`, `st
 
 CREATE TABLE `noticeboard` (
   `id` int(11) NOT NULL,
-  `notice_title` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `notice` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `date` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `notice_title` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `notice` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `date` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `status` int(11) DEFAULT 1,
   `show_on_website` int(11) DEFAULT 0,
-  `image` text CHARACTER SET utf8 DEFAULT NULL,
+  `image` text COLLATE utf8_unicode_ci DEFAULT NULL,
   `school_id` int(11) NOT NULL,
   `session` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -740,8 +822,8 @@ CREATE TABLE `parents` (
 
 CREATE TABLE `payment_settings` (
   `id` int(11) NOT NULL,
-  `key` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
-  `value` longtext CHARACTER SET utf8 DEFAULT NULL
+  `key` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `value` longtext COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -760,18 +842,18 @@ INSERT INTO `payment_settings` (`id`, `key`, `value`) VALUES
 
 CREATE TABLE `routines` (
   `id` int(11) NOT NULL,
-  `class_id` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `section_id` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `subject_id` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `starting_hour` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `ending_hour` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `starting_minute` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `ending_minute` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `day` varchar(255) CHARACTER SET utf8 DEFAULT '',
+  `class_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `section_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `subject_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `starting_hour` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ending_hour` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `starting_minute` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ending_minute` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `day` varchar(255) COLLATE utf8_unicode_ci DEFAULT '',
   `teacher_id` int(11) DEFAULT NULL,
   `room_id` int(11) DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL,
-  `session_id` varchar(255) CHARACTER SET utf8 DEFAULT ''
+  `session_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -782,9 +864,9 @@ CREATE TABLE `routines` (
 
 CREATE TABLE `schools` (
   `id` int(11) UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `address` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `phone` longtext CHARACTER SET utf8 DEFAULT NULL
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `address` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `phone` longtext COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -802,7 +884,7 @@ INSERT INTO `schools` (`id`, `name`, `address`, `phone`) VALUES
 
 CREATE TABLE `sections` (
   `id` int(11) UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `class_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -824,7 +906,7 @@ INSERT INTO `sections` (`id`, `name`, `class_id`) VALUES
 
 CREATE TABLE `sessions` (
   `id` int(11) UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `status` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -844,25 +926,25 @@ INSERT INTO `sessions` (`id`, `name`, `status`) VALUES
 CREATE TABLE `settings` (
   `id` int(11) UNSIGNED NOT NULL,
   `school_id` int(11) DEFAULT NULL,
-  `system_name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `system_title` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `system_email` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `phone` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `address` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `purchase_code` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `system_currency` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `currency_position` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `running_session` varchar(255) CHARACTER SET utf8 DEFAULT '',
-  `language` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `student_email_verification` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `footer_text` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `footer_link` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `version` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `fax` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `date_of_last_updated_attendance` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `timezone` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `youtube_api_key` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `vimeo_api_key` varchar(255) CHARACTER SET utf8 DEFAULT NULL
+  `system_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `system_title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `system_email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `address` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `purchase_code` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `system_currency` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `currency_position` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `running_session` varchar(255) COLLATE utf8_unicode_ci DEFAULT '',
+  `language` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `student_email_verification` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `footer_text` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `footer_link` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `version` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `fax` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `date_of_last_updated_attendance` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `timezone` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `youtube_api_key` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `vimeo_api_key` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -880,16 +962,16 @@ INSERT INTO `settings` (`id`, `school_id`, `system_name`, `system_title`, `syste
 
 CREATE TABLE `smtp_settings` (
   `id` int(11) NOT NULL,
-  `mail_sender` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `smtp_protocol` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `smtp_host` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `smtp_username` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `smtp_password` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `smtp_port` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `smtp_secure` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `smtp_set_from` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `smtp_debug` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `smtp_show_error` varchar(255) CHARACTER SET utf8 DEFAULT NULL
+  `mail_sender` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `smtp_protocol` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `smtp_host` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `smtp_username` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `smtp_password` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `smtp_port` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `smtp_secure` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `smtp_set_from` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `smtp_debug` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `smtp_show_error` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -900,7 +982,7 @@ CREATE TABLE `smtp_settings` (
 
 CREATE TABLE `students` (
   `id` int(11) UNSIGNED NOT NULL,
-  `code` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `code` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `session` int(11) DEFAULT NULL,
@@ -973,7 +1055,87 @@ INSERT INTO `students` (`id`, `code`, `user_id`, `parent_id`, `session`, `school
 (59, '2021-1235-7049', 18, 0, 1, 1),
 (60, '2021-4128-5097', 19, 0, 1, 1),
 (61, '2021-8172-9563', 20, 0, 1, 1),
-(62, '2021-2075-9836', 21, 0, 1, 1);
+(62, '2021-2075-9836', 21, 0, 1, 1),
+(63, '2021-1287-0364', 22, 0, 1, 1),
+(64, '2021-6291-0743', 23, 0, 1, 1),
+(65, '2021-2375-8094', 24, 0, 1, 1),
+(66, '2021-3057-6249', 25, 0, 1, 1),
+(67, '2021-5104-2796', 26, 0, 1, 1),
+(68, '2021-6521-4780', 27, 0, 1, 1),
+(69, '2021-1784-0295', 28, 0, 1, 1),
+(70, '2021-7843-0692', 29, 0, 1, 1),
+(71, '2021-3046-9518', 30, 0, 1, 1),
+(72, '2021-7123-8045', 31, 0, 1, 1),
+(73, '2021-0854-3216', 32, 0, 1, 1),
+(74, '2021-5406-1279', 33, 0, 1, 1),
+(75, '2021-8537-4016', 34, 0, 1, 1),
+(76, '2021-2605-8917', 35, 0, 1, 1),
+(77, '2021-0528-9763', 36, 0, 1, 1),
+(78, '2021-5764-9038', 37, 0, 1, 1),
+(79, '2021-2345-8719', 38, 0, 1, 1),
+(80, '2021-0657-9481', 39, 0, 1, 1),
+(81, '2021-9208-4516', 40, 0, 1, 1),
+(82, '2021-0674-3128', 41, 0, 1, 1),
+(83, '2021-1364-2807', 42, 0, 1, 1),
+(84, '2021-4390-5627', 43, 0, 1, 1),
+(85, '2021-3028-6951', 44, 0, 1, 1),
+(86, '2021-2518-6079', 45, 0, 1, 1),
+(87, '2021-8017-9463', 46, 0, 1, 1),
+(88, '2021-2415-8967', 47, 0, 1, 1),
+(89, '2021-0146-9723', 48, 0, 1, 1),
+(90, '2021-1207-4965', 49, 0, 1, 1),
+(91, '2021-3268-1904', 50, 0, 1, 1),
+(92, '2021-7329-6081', 51, 0, 1, 1),
+(93, '2021-4786-9352', 52, 0, 1, 1),
+(94, '2021-6832-7051', 53, 0, 1, 1),
+(95, '2021-4076-9321', 54, 0, 1, 1),
+(96, '2021-8235-1609', 55, 0, 1, 1),
+(97, '2021-3826-7490', 56, 0, 1, 1),
+(98, '2021-3106-5982', 57, 0, 1, 1),
+(99, '2021-3160-8527', 58, 0, 1, 1),
+(100, '2021-5726-3098', 59, 0, 1, 1),
+(101, '2021-9765-4132', 60, 0, 1, 1),
+(102, '2021-2863-5710', 61, 0, 1, 1),
+(103, '2021-6928-3471', 62, 0, 1, 1),
+(104, '2021-7632-9018', 63, 0, 1, 1),
+(105, '2021-5403-9261', 64, 0, 1, 1),
+(106, '2021-0657-8123', 65, 0, 1, 1),
+(107, '2021-2953-7046', 66, 0, 1, 1),
+(108, '2021-9042-1357', 67, 0, 1, 1),
+(109, '2021-8529-0314', 68, 0, 1, 1),
+(110, '2021-3068-5124', 69, 0, 1, 1),
+(111, '2021-1827-3649', 70, 0, 1, 1),
+(112, '2021-7459-8063', 71, 0, 1, 1),
+(113, '2021-6501-2374', 72, NULL, 1, 1),
+(114, '2021-1486-5093', 0, NULL, 1, 1),
+(115, '2021-6087-5914', 0, NULL, 1, 1),
+(116, '2021-0573-8914', 0, NULL, 1, 1),
+(117, '2021-7324-6895', 0, NULL, 1, 1),
+(118, '2021-3678-9415', 0, NULL, 1, 1),
+(119, '2021-0679-8521', 0, NULL, 1, 1),
+(120, '2021-2591-8476', 0, NULL, 1, 1),
+(121, '2021-0419-5268', 0, NULL, 1, 1),
+(122, '2021-4059-8273', 0, NULL, 1, 1),
+(123, '2021-4958-2310', 0, NULL, 1, 1),
+(124, '2021-9726-3485', 0, NULL, 1, 1),
+(125, '2021-4682-9371', 0, NULL, 1, 1),
+(126, '2021-9352-1476', 0, NULL, 1, 1),
+(127, '2021-0531-2497', 0, NULL, 1, 1),
+(128, '2021-1637-2904', 0, NULL, 1, 1),
+(129, '2021-9745-0283', 0, NULL, 1, 1),
+(130, '2021-0694-7213', 0, NULL, 1, 1),
+(131, '2021-4850-9762', 0, NULL, 1, 1),
+(132, '2021-1576-0439', 0, NULL, 1, 1),
+(133, '2021-2804-1739', 0, NULL, 1, 1),
+(134, '2021-3471-5629', 0, NULL, 1, 1),
+(135, '2021-7401-9658', 0, NULL, 1, 1),
+(136, '2021-3480-6751', 0, NULL, 1, 1),
+(137, '2021-3702-6945', 0, NULL, 1, 1),
+(138, '2021-7604-5831', 0, NULL, 1, 1),
+(139, '2021-2456-3701', 0, NULL, 1, 1),
+(140, '2021-2456-1390', 0, NULL, 1, 1),
+(141, '2021-6321-9847', 0, NULL, 1, 1),
+(142, '2021-6973-5480', 0, NULL, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -983,7 +1145,7 @@ INSERT INTO `students` (`id`, `code`, `user_id`, `parent_id`, `session`, `school
 
 CREATE TABLE `subjects` (
   `id` int(11) UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `class_id` int(11) DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL,
   `session` int(11) DEFAULT NULL
@@ -997,11 +1159,11 @@ CREATE TABLE `subjects` (
 
 CREATE TABLE `syllabuses` (
   `id` int(11) UNSIGNED NOT NULL,
-  `title` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `class_id` int(11) DEFAULT NULL,
   `section_id` int(11) DEFAULT NULL,
   `subject_id` int(11) DEFAULT NULL,
-  `file` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `file` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `session_id` int(11) DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -1016,10 +1178,10 @@ CREATE TABLE `teachers` (
   `id` int(11) UNSIGNED NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   `department_id` int(11) DEFAULT NULL,
-  `designation` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `designation` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL,
-  `social_links` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `about` longtext CHARACTER SET utf8 DEFAULT NULL,
+  `social_links` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `about` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
   `show_on_website` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -1048,19 +1210,19 @@ CREATE TABLE `teacher_permissions` (
 
 CREATE TABLE `users` (
   `id` int(11) UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `role` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `address` longtext CHARACTER SET utf8 DEFAULT NULL,
-  `phone` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `remember_token` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `birthday` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `gender` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `blood_group` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `role` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `address` longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `remember_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `birthday` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `gender` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `blood_group` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `school_id` int(11) DEFAULT NULL,
-  `authentication_key` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
-  `watch_history` longtext CHARACTER SET utf8 DEFAULT NULL
+  `authentication_key` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `watch_history` longtext COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -1068,17 +1230,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`, `address`, `phone`, `remember_token`, `birthday`, `gender`, `blood_group`, `school_id`, `authentication_key`, `watch_history`) VALUES
-(1, 'Ahmed Mohamed', 'ahmedmohamed@yanabee.com', '1fe9ae9361832280e2c2881e8eb1abe8e05af369', 'superadmin', NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, '[]'),
-(12, '', 'ahmed-karam@yanabee-academy.com', 'c461484980677a56d99190ea2451048f9ebc03e6', 'student', NULL, '', NULL, NULL, NULL, NULL, 1, NULL, '[]'),
-(13, '', 'mohamed-ahmed@yanabee-academy.com', 'f11512adef6dd8bf483623e1e164484b17ffd3b5', 'student', NULL, '', NULL, NULL, NULL, NULL, 1, NULL, '[]'),
-(14, '', 'abo-hagr@yanabee-academy.com', 'ea8992cc3a6c5e5bad244381acb0da40be3ea946', 'student', NULL, '', NULL, NULL, NULL, NULL, 1, NULL, '[]'),
-(15, '', 'ahmed-omran@yanabee-academy.com', '5ae021c52bac2633275986c9d5f0c57df14bf1fb', 'student', NULL, '', NULL, NULL, NULL, NULL, 1, NULL, '[]'),
-(16, '', 'hussain-mohamed@yanabee-academy.com', 'c3a4e2306bbb21e4c8ea8f215d52dfb4b38c4988', 'student', NULL, '', NULL, NULL, NULL, NULL, 1, NULL, '[]'),
-(17, '', 'ahmed-eldeba@yanabee-academy.com', '873c2e2fd5dca1cfa60725cb110b9b82d366fd54', 'student', NULL, '', NULL, NULL, NULL, NULL, 1, NULL, '[]'),
-(18, '', 'ahmed-ragab@yanabee-academy.com', 'b27c37c461acc9e33e43abe45c11d6fa13ac4c29', 'student', NULL, '', NULL, NULL, NULL, NULL, 1, NULL, '[]'),
-(19, '', 'yazn-ibrahim@yanabee-academy.com', '3b93b42b1714105efaa1a0897b6637178f1e7f08', 'student', NULL, '', NULL, NULL, NULL, NULL, 1, NULL, '[]'),
-(20, '', 'ayman-mabrouk@yanabee-academy.com', '913a0e316f809f5c177ad2968dbc0f1b295678c6', 'student', NULL, '', NULL, NULL, NULL, NULL, 1, NULL, '[]'),
-(21, '', 'mohamed-zaher@yanabee-academy.com', 'f0cb2360c19a323c9ea94be198c7cb72e4566dc3', 'student', NULL, '', NULL, NULL, NULL, NULL, 1, NULL, '[]');
+(1, 'Ahmed Mohamed', 'ahmedmohamed@yanabee.com', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', 'superadmin', NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, '[]');
 
 --
 -- Indexes for dumped tables
@@ -1369,7 +1521,7 @@ ALTER TABLE `departments`
 -- AUTO_INCREMENT for table `enrols`
 --
 ALTER TABLE `enrols`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
 
 --
 -- AUTO_INCREMENT for table `event_calendars`
@@ -1501,7 +1653,7 @@ ALTER TABLE `smtp_settings`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
 
 --
 -- AUTO_INCREMENT for table `subjects`
@@ -1531,7 +1683,7 @@ ALTER TABLE `teacher_permissions`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
