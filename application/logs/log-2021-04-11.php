@@ -89,3 +89,10 @@ ERROR - 2021-04-11 20:25:01 --> Query error: Column 'email' cannot be null - Inv
 ERROR - 2021-04-11 20:25:01 --> Query error: Column 'email' cannot be null - Invalid query: INSERT INTO `users` (`name`, `email`, `password`, `phone`, `gender`, `role`, `school_id`, `watch_history`) VALUES ('', NULL, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', NULL, NULL, 'student', '1', '[]')
 ERROR - 2021-04-11 20:25:01 --> Query error: Column 'email' cannot be null - Invalid query: INSERT INTO `users` (`name`, `email`, `password`, `phone`, `gender`, `role`, `school_id`, `watch_history`) VALUES ('\0', NULL, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', NULL, NULL, 'student', '1', '[]')
 ERROR - 2021-04-11 20:25:01 --> Query error: Column 'email' cannot be null - Invalid query: INSERT INTO `users` (`name`, `email`, `password`, `phone`, `gender`, `role`, `school_id`, `watch_history`) VALUES ('', NULL, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', NULL, NULL, 'student', '1', '[]')
+ERROR - 2021-04-11 20:46:46 --> Unable to set database connection charset: utf8_unicode_ci
+ERROR - 2021-04-11 20:46:46 --> Unable to set database connection charset: utf8_unicode_ci
+ERROR - 2021-04-11 20:49:19 --> Unable to set database connection charset: utf8_unicode_ci
+ERROR - 2021-04-11 20:49:23 --> Unable to set database connection charset: utf8_unicode_ci
+ERROR - 2021-04-11 20:49:26 --> Unable to set database connection charset: utf8_unicode_ci
+ERROR - 2021-04-11 20:49:30 --> Unable to set database connection charset: utf8_unicode_ci
+ERROR - 2021-04-11 20:49:44 --> Unable to set database connection charset: utf8_unicode_ci
