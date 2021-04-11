@@ -456,5 +456,11 @@
     "women_regstration": "استمارة تسجيل للإناث",
     "class_added_successfully": "تم اضافة المستوي",
     "department_has_been_updated_successfully": "تم تحديث القسم",
-    "الصفحة_الرئيسية": "الصفحة الرئيسية"
+    "الصفحة_الرئيسية": "الصفحة الرئيسية",
+    "subject_has_been_added_successfully": "تم اضافة المادة",
+    "update_subject": "تعديل المادة",
+    "syllabus_added_successfully": "تم اضافة المنهج",
+    "download": "تحميل",
+    "delete_syllabus": "حذف",
+    "subject_has_been_updated_successfully": "تم تعديل المادة بنجاح"
 }

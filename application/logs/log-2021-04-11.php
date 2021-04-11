@@ -96,3 +96,12 @@ ERROR - 2021-04-11 20:49:23 --> Unable to set database connection charset: utf8_
 ERROR - 2021-04-11 20:49:26 --> Unable to set database connection charset: utf8_unicode_ci
 ERROR - 2021-04-11 20:49:30 --> Unable to set database connection charset: utf8_unicode_ci
 ERROR - 2021-04-11 20:49:44 --> Unable to set database connection charset: utf8_unicode_ci
+ERROR - 2021-04-11 21:52:08 --> Severity: Warning --> move_uploaded_file(uploads/syllabus/9091f33d4d970d1fc0bcae31a9c86109.docx): failed to open stream: No such file or directory C:\xampp\htdocs\yanabee\application\models\Crud_model.php 342
+ERROR - 2021-04-11 21:52:08 --> Severity: Warning --> move_uploaded_file(): Unable to move 'C:\xampp\tmp\phpBCC7.tmp' to 'uploads/syllabus/9091f33d4d970d1fc0bcae31a9c86109.docx' C:\xampp\htdocs\yanabee\application\models\Crud_model.php 342
+ERROR - 2021-04-11 21:52:46 --> Severity: Warning --> move_uploaded_file(uploads/syllabus/95f2c2185f004dad50d61ad5fa4bb622.docx): failed to open stream: No such file or directory C:\xampp\htdocs\yanabee\application\models\Crud_model.php 342
+ERROR - 2021-04-11 21:52:46 --> Severity: Warning --> move_uploaded_file(): Unable to move 'C:\xampp\tmp\php58E9.tmp' to 'uploads/syllabus/95f2c2185f004dad50d61ad5fa4bb622.docx' C:\xampp\htdocs\yanabee\application\models\Crud_model.php 342
+ERROR - 2021-04-11 21:53:01 --> Severity: Warning --> move_uploaded_file(uploads/syllabus/a0e76275c7566e0cd51ed3910aee8a6a.docx): failed to open stream: No such file or directory C:\xampp\htdocs\yanabee\application\models\Crud_model.php 342
+ERROR - 2021-04-11 21:53:01 --> Severity: Warning --> move_uploaded_file(): Unable to move 'C:\xampp\tmp\php914F.tmp' to 'uploads/syllabus/a0e76275c7566e0cd51ed3910aee8a6a.docx' C:\xampp\htdocs\yanabee\application\models\Crud_model.php 342
+ERROR - 2021-04-11 21:53:15 --> Severity: Warning --> move_uploaded_file(uploads/syllabus/9e930232816023e789a42546cf95d51a.docx): failed to open stream: No such file or directory C:\xampp\htdocs\yanabee\application\models\Crud_model.php 342
+ERROR - 2021-04-11 21:53:15 --> Severity: Warning --> move_uploaded_file(): Unable to move 'C:\xampp\tmp\phpCA42.tmp' to 'uploads/syllabus/9e930232816023e789a42546cf95d51a.docx' C:\xampp\htdocs\yanabee\application\models\Crud_model.php 342
+ERROR - 2021-04-11 21:53:25 --> 404 Page Not Found: Uploads/syllabus
