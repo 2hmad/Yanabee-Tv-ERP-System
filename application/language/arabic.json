@@ -462,5 +462,18 @@
     "syllabus_added_successfully": "تم اضافة المنهج",
     "download": "تحميل",
     "delete_syllabus": "حذف",
-    "subject_has_been_updated_successfully": "تم تعديل المادة بنجاح"
+    "subject_has_been_updated_successfully": "تم تعديل المادة بنجاح",
+    "teacher_added_successfully": "تم اضافة المعلم",
+    "of": "Of",
+    "last_updated_at": "اخر تحديث",
+    "time": "الوقت",
+    "access_denied": "تعذر الوصول",
+    "sorry_you_are_not_permitted_to_access_this_view": "انت غير قادر علي الوصول الي هذه البيانات",
+    "admin_handles_it": "Admin handles it",
+    "present_all": "الجميع حضر",
+    "absent_all": "الجميع لم يحضر",
+    "present": "حضور",
+    "absent": "غياب",
+    "attendance_updated_successfully": "تم تحديث الحضور",
+    "certificate": "شهادة"
 }
