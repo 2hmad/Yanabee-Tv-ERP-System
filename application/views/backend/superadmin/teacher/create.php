@@ -21,7 +21,7 @@
 
         <div class="form-group col-md-12">
             <label for="designation"><?php echo get_phrase('designation'); ?></label>
-            <input type="text" class="form-control" id="designation" name = "designation" required>
+            <input type="text" class="form-control" id="designation" name = "designation">
             <small id="" class="form-text text-muted"><?php echo get_phrase('provide_teacher_designation'); ?></small>
         </div>
 
@@ -106,13 +106,13 @@
 
         <div class="form-group col-md-12">
             <label for="phone"><?php echo get_phrase('address'); ?></label>
-            <textarea class="form-control" id="address" name = "address" rows="5" required></textarea>
+            <textarea class="form-control" id="address" name = "address" rows="5"></textarea>
             <small id="" class="form-text text-muted"><?php echo get_phrase('provide_teacher_address'); ?></small>
         </div>
 
         <div class="form-group col-md-12">
             <label for="about"><?php echo get_phrase('about'); ?></label>
-            <textarea class="form-control" id="about" name = "about" rows="5" required></textarea>
+            <textarea class="form-control" id="about" name = "about" rows="5"></textarea>
             <small id="" class="form-text text-muted"><?php echo get_phrase('provide_a_small_about'); ?></small>
         </div>
 

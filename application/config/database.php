@@ -76,9 +76,13 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
+	//'username' => 'aqtardes_yanabee',
+	//'password' => 'yanabeeadmin',
+	//'database' => 'aqtardes_yanabee',
 	'username' => 'root',
 	'password' => '',
 	'database' => 'yanabee',
+
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

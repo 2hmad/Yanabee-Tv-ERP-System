@@ -485,5 +485,6 @@
     "confirm": "التأكيد",
     "academic_info": "بيانات اخري",
     "sorry_this_email_has_been_taken": "Sorry this email has been taken",
-    "admin_added_successfully": "Admin added successfully"
+    "admin_added_successfully": "Admin added successfully",
+    "student_deleted_successfully": "Student deleted successfully"
 }
