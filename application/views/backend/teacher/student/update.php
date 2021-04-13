@@ -31,18 +31,6 @@
                         </div>
                     </div>
 
-                    <div class="form-group row mb-3">
-                        <label class="col-md-3 col-form-label" for="parent_id"><?php echo get_phrase('parent'); ?></label>
-                        <div class="col-md-9">
-                            <select id="parent_id" name="parent_id" class="form-control select2"  data-toggle="select2" required >
-                                <option value="">Select A Parent</option>
-                                <?php $parents = $this->db->get_where('parents', array('school_id' => $school_id))->result_array(); ?>
-                                <?php foreach($parents as $parent): ?>
-                                    <option value="<?php echo $parent['id']; ?>" <?php if($student['parent_id'] == $parent['id']) echo 'selected'; ?>><?php echo $this->user_model->get_user_details($parent['user_id'], 'name'); ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                    </div>
 
                     <div class="form-group row mb-3">
                         <label class="col-md-3 col-form-label" for="class_id"><?php echo get_phrase('class'); ?></label>
@@ -89,22 +77,61 @@
                         </div>
                     </div>
 
-                    <div class="form-group row mb-3">
-                        <label class="col-md-3 col-form-label" for="blood_group"><?php echo get_phrase('blood_group'); ?></label>
-                        <div class="col-md-9">
-                            <select name="blood_group" id="blood_group" class="form-control select2" data-toggle = "select2"  required>
-                                <option value=""><?php echo get_phrase('select_a_blood_group'); ?></option>
-                                <option value="a+"  <?php if(strtolower($this->user_model->get_user_details($student['user_id'], 'blood_group')) == 'a+') echo 'selected'; ?>>A+</option>
-                                <option value="a-"  <?php if(strtolower($this->user_model->get_user_details($student['user_id'], 'blood_group')) == 'a-') echo 'selected'; ?>>A-</option>
-                                <option value="b+"  <?php if(strtolower($this->user_model->get_user_details($student['user_id'], 'blood_group')) == 'b+') echo 'selected'; ?>>B+</option>
-                                <option value="b-"  <?php if(strtolower($this->user_model->get_user_details($student['user_id'], 'blood_group')) == 'b-') echo 'selected'; ?>>B-</option>
-                                <option value="ab+" <?php if(strtolower($this->user_model->get_user_details($student['user_id'], 'blood_group')) == 'ab+') echo 'selected'; ?>>AB+</option>
-                                <option value="ab-" <?php if(strtolower($this->user_model->get_user_details($student['user_id'], 'blood_group')) == 'ab-') echo 'selected'; ?>>AB-</option>
-                                <option value="o+"  <?php if(strtolower($this->user_model->get_user_details($student['user_id'], 'blood_group')) == 'o+') echo 'selected'; ?>>O+</option>
-                                <option value="o-"  <?php if(strtolower($this->user_model->get_user_details($student['user_id'], 'blood_group')) == '0-') echo 'selected'; ?>>O-</option>
-                            </select>
-                        </div>
+                <div class="form-group row mb-3">
+                    <label class="col-md-3 col-form-label" for="nationality"><?php echo get_phrase('nationality'); ?></label>
+                    <div class="col-md-9">
+                        <input type="text" id="nationality" name="nationality" class="form-control" placeholder="Nationality" value="<?php echo $this->user_model->get_user_details($student['user_id'], 'nationality'); ?>">
                     </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label class="col-md-3 col-form-label" for="recitation"><?php echo get_phrase('recitation'); ?></label>
+                    <div class="col-md-9">
+                        <input type="text" id="recitation" name="recitation" class="form-control" placeholder="Recitation" value="<?php echo $this->user_model->get_user_details($student['user_id'], 'recitation'); ?>">
+                    </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label class="col-md-3 col-form-label" for="conservation"><?php echo get_phrase('conservation'); ?></label>
+                    <div class="col-md-9">
+                        <input type="text" id="conservation" name="conservation" class="form-control" placeholder="Conservation Level" value="<?php echo $this->user_model->get_user_details($student['user_id'], 'conservation'); ?>">
+                    </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label class="col-md-3 col-form-label" for="recitation_level"><?php echo get_phrase('recitation_level'); ?></label>
+                    <div class="col-md-9">
+                        <input type="text" id="recitation_level" name="recitation_level" class="form-control" placeholder="Recitation Level" value="<?php echo $this->user_model->get_user_details($student['user_id'], 'recitation_level'); ?>">
+                    </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label class="col-md-3 col-form-label" for="day"><?php echo get_phrase('day'); ?></label>
+                    <div class="col-md-9">
+                        <input type="text" id="day" name="day" class="form-control" placeholder="Day" value="<?php echo $this->user_model->get_user_details($student['user_id'], 'day'); ?>">
+                    </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label class="col-md-3 col-form-label" for="hour"><?php echo get_phrase('hour'); ?></label>
+                    <div class="col-md-9">
+                        <input type="text" id="hour" name="hour" class="form-control" placeholder="Hour" value="<?php echo $this->user_model->get_user_details($student['user_id'], 'hour'); ?>">
+                    </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label class="col-md-3 col-form-label" for="method"><?php echo get_phrase('communicate'); ?></label>
+                    <div class="col-md-9">
+                        <input type="text" id="method" name="method" class="form-control" placeholder="Communicate Method" value="<?php echo $this->user_model->get_user_details($student['user_id'], 'method'); ?>">
+                    </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <label class="col-md-3 col-form-label" for="confirm"><?php echo get_phrase('confirm'); ?></label>
+                    <div class="col-md-9">
+                        <input type="text" id="confirm" name="confirm" class="form-control" placeholder="Confirm" value="<?php echo $this->user_model->get_user_details($student['user_id'], 'confirm'); ?>">
+                    </div>
+                </div>
 
                     <div class="form-group row mb-3">
                         <label class="col-md-3 col-form-label" for="example-textarea"><?php echo get_phrase('address'); ?></label>

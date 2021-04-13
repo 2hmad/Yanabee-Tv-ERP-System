@@ -70,8 +70,8 @@
                     </form>
                     <!-- end form-->
                     <div style="text-align: center;margin-top:5%;display:block">
-                        <a href="http://bit.ly/3jGASwG" target="_blank"><button class="btn btn-danger" style="background-color: #a42157;border-color: #a42157;font-weight:bold;margin-bottom:2%"><?php echo get_phrase('men_regstration'); ?></button></a>
-                        <a href="http://bit.ly/3qdZWha" target="_blank"><button class="btn btn-danger" style="background-color: #a42157;border-color: #a42157;font-weight:bold;margin-bottom:2%"><?php echo get_phrase('women_regstration'); ?></button></a>
+                        <a href="http://bit.ly/3jGASwG" target="_blank"><button class="btn btn-dark" style="font-weight:bold;margin-bottom:2%"><?php echo get_phrase('men_regstration'); ?></button></a>
+                        <a href="http://bit.ly/3qdZWha" target="_blank"><button class="btn btn-dark" style="font-weight:bold;margin-bottom:2%"><?php echo get_phrase('women_regstration'); ?></button></a>
                     </div>
                 </div> <!-- end .card-body -->
             </div> <!-- end .align-items-center.d-flex.h-100-->

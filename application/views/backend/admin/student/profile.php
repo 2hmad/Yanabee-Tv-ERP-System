@@ -23,7 +23,7 @@
                     <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><?php echo get_phrase('profile'); ?></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="parent-tab" data-toggle="tab" href="#parent_info" role="tab" aria-controls="parent_info" aria-selected="false"><?php echo get_phrase('parent_info'); ?></a>
+                    <a class="nav-link" id="parent-tab" data-toggle="tab" href="#parent_info" role="tab" aria-controls="parent_info" aria-selected="false"><?php echo get_phrase('academic_info'); ?></a>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
@@ -59,21 +59,51 @@
                     <table class="table table-centered mb-0">
                         <tbody>
                             <tr>
-                                <td style="font-weight: bold;"><?php echo get_phrase('parent_name'); ?>:</td>
+                                <td style="font-weight: bold;"><?php echo get_phrase('nationality'); ?>:</td>
                                 <td>
-                                    <?php echo $this->user_model->get_user_details($parent['user_id'], 'name'); ?>
+                                    <?php echo $this->user_model->get_user_details($student['user_id'], 'nationality'); ?>
                                 </td>
                             </tr>
                             <tr>
-                                <td style="font-weight: bold;"><?php echo get_phrase('parent_email'); ?>:</td>
+                                <td style="font-weight: bold;"><?php echo get_phrase('recitation'); ?>:</td>
                                 <td>
-                                    <?php echo $this->user_model->get_user_details($parent['user_id'], 'email'); ?>
+                                    <?php echo $this->user_model->get_user_details($student['user_id'], 'recitation'); ?>
                                 </td>
                             </tr>
                             <tr>
-                                <td style="font-weight: bold;"><?php echo get_phrase('parent_phone_number'); ?>:</td>
+                                <td style="font-weight: bold;"><?php echo get_phrase('recitation_level'); ?>:</td>
                                 <td>
-                                    <?php echo $this->user_model->get_user_details($parent['user_id'], 'phone'); ?>sddfas
+                                    <?php echo $this->user_model->get_user_details($student['user_id'], 'recitation_level'); ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;"><?php echo get_phrase('conservation'); ?>:</td>
+                                <td>
+                                    <?php echo $this->user_model->get_user_details($student['user_id'], 'conservation'); ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;"><?php echo get_phrase('day'); ?>:</td>
+                                <td>
+                                    <?php echo $this->user_model->get_user_details($student['user_id'], 'day'); ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;"><?php echo get_phrase('hour'); ?>:</td>
+                                <td>
+                                    <?php echo $this->user_model->get_user_details($student['user_id'], 'hour'); ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;"><?php echo get_phrase('communicate'); ?>:</td>
+                                <td>
+                                    <?php echo $this->user_model->get_user_details($student['user_id'], 'method'); ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;"><?php echo get_phrase('confirm'); ?>:</td>
+                                <td>
+                                    <?php echo $this->user_model->get_user_details($student['user_id'], 'confirm'); ?>
                                 </td>
                             </tr>
                         </tbody>

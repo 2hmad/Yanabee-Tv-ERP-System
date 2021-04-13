@@ -569,8 +569,15 @@ class User_model extends CI_Model {
 		$user_data['password'] = sha1(html_escape($this->input->post('password')));
 		$user_data['birthday'] = strtotime(html_escape($this->input->post('birthday')));
 		$user_data['gender'] = html_escape($this->input->post('gender'));
+		$user_data['nationality'] = html_escape($this->input->post('nationality'));
+		$user_data['recitation'] = html_escape($this->input->post('recitation'));
+		$user_data['conservation'] = html_escape($this->input->post('conservation'));
+		$user_data['recitation_level'] = html_escape($this->input->post('recitation_level'));
+		$user_data['day'] = html_escape($this->input->post('day'));
+		$user_data['hour'] = html_escape($this->input->post('hour'));
+		$user_data['method'] = html_escape($this->input->post('method'));
+		$user_data['confirm'] = html_escape($this->input->post('confirm'));
 		$user_data['blood_group'] = html_escape($this->input->post('blood_group'));
-		$user_data['address'] = html_escape($this->input->post('address'));
 		$user_data['phone'] = html_escape($this->input->post('phone'));
 		$user_data['role'] = 'student';
 		$user_data['school_id'] = $this->school_id;
@@ -741,8 +748,6 @@ class User_model extends CI_Model {
 	}
 
 	public function student_update($student_id = '', $user_id = ''){
-		$student_data['parent_id'] = html_escape($this->input->post('parent_id'));
-
 		$enroll_data['class_id'] = html_escape($this->input->post('class_id'));
 		$enroll_data['section_id'] = html_escape($this->input->post('section_id'));
 
@@ -750,14 +755,20 @@ class User_model extends CI_Model {
 		$user_data['email'] = html_escape($this->input->post('email'));
 		$user_data['birthday'] = strtotime(html_escape($this->input->post('birthday')));
 		$user_data['gender'] = html_escape($this->input->post('gender'));
-		$user_data['blood_group'] = html_escape($this->input->post('blood_group'));
+		$user_data['nationality'] = html_escape($this->input->post('nationality'));
+		$user_data['recitation'] = html_escape($this->input->post('recitation'));
+		$user_data['conservation'] = html_escape($this->input->post('conservation'));
+		$user_data['recitation_level'] = html_escape($this->input->post('recitation_level'));
+		$user_data['day'] = html_escape($this->input->post('day'));
+		$user_data['hour'] = html_escape($this->input->post('hour'));
+		$user_data['method'] = html_escape($this->input->post('method'));
+		$user_data['confirm'] = html_escape($this->input->post('confirm'));
 		$user_data['address'] = html_escape($this->input->post('address'));
 		$user_data['phone'] = html_escape($this->input->post('phone'));
 		// Check Duplication
 		$duplication_status = $this->check_duplication('on_update', $user_data['email'], $user_id);
 		if ($duplication_status) {
 			$this->db->where('id', $student_id);
-			$this->db->update('students', $student_data);
 
 			$this->db->where('student_id', $student_id);
 			$this->db->update('enrols', $enroll_data);

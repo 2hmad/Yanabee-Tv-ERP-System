@@ -1168,5 +1168,13 @@
     "school_website": "School website",
     "form_builder": "Form builder",
     "men_regstration": "Registration form for men",
-    "women_regstration": "Registration form for women"
+    "women_regstration": "Registration form for women",
+    "nationality": "Nationality",
+    "recitation": "Recitation",
+    "recitation_level": "Recitation level",
+    "conservation": "Conservation level",
+    "hour": "Hour",
+    "communicate": "Communicate Method",
+    "confirm": "Confirmation",
+    "academic_info": "Academic Data"
 }

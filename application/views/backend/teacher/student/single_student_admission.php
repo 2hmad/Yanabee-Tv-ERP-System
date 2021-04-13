@@ -64,11 +64,60 @@
                 </select>
             </div>
         </div>
+        
+        <div class="form-group row mb-3">
+            <label class="col-md-3 col-form-label" for="nationality"><?php echo get_phrase('nationality'); ?></label>
+            <div class="col-md-9">
+                <input type="text" id="nationality" name="nationality" class="form-control" placeholder="Nationality" required>
+            </div>
+        </div>
 
         <div class="form-group row mb-3">
-            <label class="col-md-3 col-form-label" for="example-textarea"><?php echo get_phrase('address'); ?></label>
+            <label class="col-md-3 col-form-label" for="recitation"><?php echo get_phrase('recitation'); ?></label>
             <div class="col-md-9">
-                <textarea class="form-control" id="example-textarea" rows="5" name = "address" placeholder="address"></textarea>
+                <input type="text" id="recitation" name="recitation" class="form-control" placeholder="Recitation" required>
+            </div>
+        </div>
+
+        <div class="form-group row mb-3">
+            <label class="col-md-3 col-form-label" for="conservation"><?php echo get_phrase('conservation'); ?></label>
+            <div class="col-md-9">
+                <input type="text" id="conservation" name="conservation" class="form-control" placeholder="Conservation Level" required>
+            </div>
+        </div>
+
+        <div class="form-group row mb-3" hidden>
+            <label class="col-md-3 col-form-label" for="recitation_level"><?php echo get_phrase('recitation_level'); ?></label>
+            <div class="col-md-9">
+                <input type="text" id="recitation_level" name="recitation_level" class="form-control" placeholder="Recitation Level">
+            </div>
+        </div>
+
+        <div class="form-group row mb-3">
+            <label class="col-md-3 col-form-label" for="day"><?php echo get_phrase('day'); ?></label>
+            <div class="col-md-9">
+                <input type="text" id="day" name="day" class="form-control" placeholder="Day" required>
+            </div>
+        </div>
+
+        <div class="form-group row mb-3">
+            <label class="col-md-3 col-form-label" for="hour"><?php echo get_phrase('hour'); ?></label>
+            <div class="col-md-9">
+                <input type="text" id="hour" name="hour" class="form-control" placeholder="Hour" required>
+            </div>
+        </div>
+
+        <div class="form-group row mb-3">
+            <label class="col-md-3 col-form-label" for="method"><?php echo get_phrase('communicate'); ?></label>
+            <div class="col-md-9">
+                <input type="text" id="method" name="method" class="form-control" placeholder="Communicate Method" required>
+            </div>
+        </div>
+
+        <div class="form-group row mb-3">
+            <label class="col-md-3 col-form-label" for="confirm"><?php echo get_phrase('confirm'); ?></label>
+            <div class="col-md-9">
+                <input type="text" id="confirm" name="confirm" class="form-control" placeholder="Confirm" required>
             </div>
         </div>
 
