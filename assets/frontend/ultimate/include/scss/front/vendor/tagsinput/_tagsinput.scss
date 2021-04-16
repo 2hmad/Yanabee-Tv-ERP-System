@@ -24,7 +24,7 @@
     .tag {
       position: relative;
       display: inline-block;
-      font-size: .875rem;
+      font-size: 1rem !important;
       color: $secondary;
       background-color: rgba($secondary, .1);
       @include border-radius($border-radius);

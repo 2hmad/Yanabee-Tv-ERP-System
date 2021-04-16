@@ -58,7 +58,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0;
   font-family: "Poppins", Helvetica, Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1rem !important;
   font-weight: 400;
   line-height: 1.5;
   color: #1e2022;
@@ -389,7 +389,7 @@ h5, .h5 {
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 .lead {
@@ -465,7 +465,7 @@ mark,
 
 .blockquote {
   margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 .blockquote-footer {
@@ -1905,7 +1905,7 @@ pre code {
   width: 100%;
   height: calc(1.5em + 1.5rem + 2px);
   padding: 0.75rem 1rem;
-  font-size: 1rem;
+  font-size: 1rem !important;
   font-weight: 400;
   line-height: 1.5;
   color: #1e2022;
@@ -2429,7 +2429,7 @@ textarea.form-control {
   background-color: transparent;
   border: 1px solid transparent;
   padding: 0.75rem 1rem;
-  font-size: 1rem;
+  font-size: 1rem !important;
   line-height: 1.5;
   border-radius: 0.3125rem;
   transition: all 0.2s ease-in-out;
@@ -3222,7 +3222,7 @@ input[type="button"].btn-block {
   min-width: 8.4375rem;
   padding: 1rem 0;
   margin: 0.125rem 0 0;
-  font-size: 1rem;
+  font-size: 1rem !important;
   color: #1e2022;
   text-align: left;
   list-style: none;
@@ -3626,7 +3626,7 @@ input[type="button"].btn-block {
       align-items: center;
   padding: 0.75rem 1rem;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 1rem !important;
   font-weight: 400;
   line-height: 1.5;
   color: #8c98a4;
@@ -3859,7 +3859,7 @@ input[type="button"].btn-block {
   width: 100%;
   height: calc(1.5em + 1.5rem + 2px);
   padding: 0.75rem 2rem 0.75rem 1rem;
-  font-size: 1rem;
+  font-size: 1rem !important;
   font-weight: 400;
   line-height: 1.5;
   color: #1e2022;
@@ -6390,7 +6390,7 @@ a.close.disabled {
 .popover-header {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
-  font-size: 1rem;
+  font-size: 1rem !important;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
   border-top-left-radius: calc(0.625rem - 1px);
@@ -13059,7 +13059,7 @@ button:focus {
 .u-header__sub-menu-title {
   display: block;
   color: #1e2022;
-  font-size: 1rem;
+  font-size: 1rem !important;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -13134,7 +13134,7 @@ button:focus {
 .u-header__promo-title {
   display: block;
   color: #1e2022;
-  font-size: 1rem;
+  font-size: 1rem !important;
   font-weight: 500;
 }
 
@@ -17674,7 +17674,7 @@ label.btn {
 .btn-icon {
   position: relative;
   line-height: 0;
-  font-size: 1rem;
+  font-size: 1rem !important;
   width: 3.125rem;
   height: 3.125rem;
   padding: 0;
@@ -18332,7 +18332,7 @@ label.btn {
 
 .u-sidebar--account__list-link {
   display: block;
-  font-size: .875rem;
+  font-size: 1rem !important;
   color: #97a4af;
   border-radius: 0.3125rem;
   padding: .625rem;
@@ -18373,7 +18373,7 @@ label.btn {
 .u-sidebar__footer--account__text {
   position: relative;
   z-index: 1;
-  font-size: .875rem;
+  font-size: 1rem !important;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -18418,7 +18418,7 @@ label.btn {
 .u-divider {
   position: relative;
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 .u-divider::before, .u-divider::after {
@@ -18854,7 +18854,7 @@ label.btn {
 
 .input-group-lg .input-group-prepend > .input-group-text,
 .input-group-lg .input-group-append > .input-group-text {
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 /*------------------------------------
@@ -19708,14 +19708,14 @@ label.btn {
 .u-media-player__icon--lg {
   width: 5rem;
   height: 5rem;
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 /* Extra Large Size */
 .u-media-player__icon--xl {
   width: 6.25rem;
   height: 6.25rem;
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 /* Positions */
@@ -19865,7 +19865,7 @@ label.btn {
 .u-video-player__icon--lg {
   width: 5rem;
   height: 5rem;
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 /* Positions */
@@ -21346,7 +21346,7 @@ label.btn {
   text-align: center;
   width: 1.375rem;
   height: 1.375rem;
-  font-size: 1rem;
+  font-size: 1rem !important;
   color: #377dff;
   background-color: rgba(55, 125, 255, 0.1);
   border-radius: 50%;
@@ -22274,7 +22274,7 @@ label.btn {
   Cubeportfolio
 ------------------------------------*/
 .u-cubeportfolio .u-cubeportfolio__item {
-  font-size: .875rem;
+  font-size: 1rem !important;
   text-transform: capitalize;
   background-color: transparent;
   border: none;
@@ -22454,7 +22454,7 @@ label.btn {
   height: 4rem;
   line-height: 4;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1rem !important;
   color: #377dff;
   text-align: center;
   background-color: rgba(55, 125, 255, 0.1);
@@ -22879,7 +22879,7 @@ label.btn {
 .u-tagsinput .bootstrap-tagsinput .tag {
   position: relative;
   display: inline-block;
-  font-size: .875rem;
+  font-size: 1rem !important;
   color: #77838f;
   background-color: rgba(119, 131, 143, 0.1);
   border-radius: 0.3125rem;

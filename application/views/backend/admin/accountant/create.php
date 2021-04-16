@@ -30,7 +30,7 @@
         <option value=""><?php echo get_phrase('select_a_gender'); ?></option>
         <option value="Male"><?php echo get_phrase('male'); ?></option>
         <option value="Female"><?php echo get_phrase('female'); ?></option>
-        <option value="Others"><?php echo get_phrase('others'); ?></option>
+        
       </select>
       <small id="" class="form-text text-muted"><?php echo get_phrase('provide_gender'); ?></small>
     </div>

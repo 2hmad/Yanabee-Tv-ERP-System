@@ -11791,7 +11791,7 @@ body.authentication-bg {
 
 .fc-text-arrow {
   font-family: inherit;
-  font-size: 1rem; }
+  font-size: 1rem !important; }
 
 .fc-state-hover {
   background: #e3eaef; }
@@ -11885,7 +11885,7 @@ table.dataTable {
     right: 0.5rem;
     content: "\F35D";
     font-family: "Material Design Icons";
-    font-size: 1rem;
+    font-size: 1rem !important;
     top: 18px; }
   table.dataTable thead .sorting:after,
   table.dataTable thead .sorting_asc:after,
@@ -11896,7 +11896,7 @@ table.dataTable {
     content: "\F360";
     font-family: "Material Design Icons";
     top: 12px;
-    font-size: 1rem; }
+    font-size: 1rem !important; }
   table.dataTable tbody > tr.selected, table.dataTable tbody > tr > .selected {
     background-color: #a42157; }
     table.dataTable tbody > tr.selected td, table.dataTable tbody > tr > .selected td {

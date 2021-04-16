@@ -82,7 +82,7 @@
 
 	&-link {
 		display: block;
-		font-size: .875rem;
+		font-size: 1rem !important;
 		color: $gray-500;
 		@include border-radius($border-radius);
 		padding: .625rem;
@@ -124,7 +124,7 @@
 	&__text {
 		position: relative;
 		z-index: 1;
-		font-size: .875rem;
+		font-size: 1rem !important;
 		color: $white-color-70;
 
 		&:hover {
