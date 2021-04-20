@@ -484,7 +484,7 @@
     "communicate": "وسيلة التواصل",
     "confirm": "التأكيد",
     "academic_info": "بيانات اخري",
-    "sorry_this_email_has_been_taken": "Sorry this email has been taken",
-    "admin_added_successfully": "Admin added successfully",
-    "student_deleted_successfully": "Student deleted successfully"
+    "sorry_this_email_has_been_taken": "هذا البريد الالكتروني مستخدم من قبل",
+    "admin_added_successfully": "تم اضافة المشرف",
+    "student_deleted_successfully": "تم حذف الطالب"
 }

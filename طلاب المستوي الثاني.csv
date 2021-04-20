@@ -1,9 +1,9 @@
-﻿StudentName,Email,Password,Phone,Gender
-عبد السلام مصطفى,abdelsalam-moustafa@ynabee.com,abdelsalam,,male
-مختار زكريا,mokhtar-zakaria@ynabee.com,mokhtar,,male
-صديق المنصر,sedek-elmonser@ynabee.com,sedek,,male
-أحمد إبراهيم خليل,ahmed-khalil@ynabee.com,ahmedkhalil,,male
-أنس محمد ولد شيخ,anas-mohamed@ynabee.com,anasmohamed,,male
-راشيد محمد,rashid-mohamed@ynabee.com,rashidmohamed,,male
-موليد هيبي حسن,moled-heby@ynabee.com,moledheby,,male
-عبد الوهاب السيد,abdelwahab-sayed@ynabee.com,abdelwahab,,male
+﻿اسم الطالب,البريد الالكتروني,كلمة المرور,رقم الهاتف,الجنس,الجنسية,الرواية,مقدار الحفظ,مستوى التلاوة,اليوم,الساعة/القاهرة,وسيلة التواصل,التأكيد
+عبد السلام مصطفى,abdelsalam-moustafa@ynabee.com,abdelsalam,,ذكر,ليبي,قالون,قصار السور,جيد,الاثنين,5,دو,تاكيد
+مختار زكريا,mokhtar-zakaria@ynabee.com,mokhtar,,ذكر,جزائري,ورش,4 أحزاب,لا يوجد,الاثنين,0.229166667,,ارسال
+صديق المنصر,sedek-elmonser@ynabee.com,sedek,,ذكر,تونسي,قالون,7 أحزاب,جيد,الاثنين,5:45م,زوم,تاكيد
+أحمد إبراهيم خليل,ahmed-khalil@ynabee.com,ahmedkhalil,,ذكر,عراقي,حفص,سورمتفرقة,ممتاز,الاثنين,6م,زوم,تاكيد
+أنس محمد ولد شيخ,anas-mohamed@ynabee.com,anasmohamed,,ذكر,مغربي,ورش,30 حزبا,جيد جدا,الاثنين,7م,,تاكيد
+راشيد محمد,rashid-mohamed@ynabee.com,rashidmohamed,,ذكر,جزائري,حفص,20 حزبا,ممتاز,الاثنين,8م,,ارسال
+موليد هيبي حسن,moled-heby@ynabee.com,moledheby,,ذكر,صومالي,حفص,جزء عم,لا يوجد,الاثنين,0.28125,,ارسال
+عبد الوهاب السيد,abdelwahab-sayed@ynabee.com,abdelwahab,,ذكر,مصري,حفص,البقرة وآل عمران,ممتاز,الاثنين,8:30م,,تاكيد
