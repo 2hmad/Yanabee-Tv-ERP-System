@@ -12,7 +12,7 @@ data-header-fix-effect="slide">
     <nav class="js-mega-menu navbar navbar-expand-md u-header__navbar u-header__navbar--no-space">
       <div class="u-header-center-aligned-nav__col">
         <!-- Logo -->
-        <a class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center u-header__navbar-brand-text-white" href="https://yanabee.tv/">
+        <a class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center u-header__navbar-brand-text-white" href="https://www.yanabee-academy.com/">
           <img src="<?php echo $logo_light;?>"
           style="height:35px;" />
         </a>
@@ -37,7 +37,7 @@ data-header-fix-effect="slide">
       <ul class="navbar-nav u-header__navbar-nav">
         <li class="nav-item u-header__nav-item <?php if($page_name == 'home') echo 'active';?>">
           <a class="nav-link u-header__nav-link"
-          href="https://yanabee.tv/"><?php echo get_phrase('Home'); ?></a>
+          href="https://www.yanabee-academy.com/"><?php echo get_phrase('Home'); ?></a>
         </li>
         <li class="nav-item u-header__nav-item <?php if($page_name == 'noticeboard' || $page_name == 'notice_details') echo 'active';?>">
           <a class="nav-link u-header__nav-link"

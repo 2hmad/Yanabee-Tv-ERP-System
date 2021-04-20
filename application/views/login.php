@@ -32,7 +32,7 @@
                 <div class="card-body" style="padding-top: 0;">
                     <!-- Logo -->
                     <div class="text-center text-lg-left mb-3">
-                        <a href="https://yanabee.tv/">
+                        <a href="https://www.yanabee-academy.com/">
                             <img src="<?php echo $this->settings_model->get_logo_dark(); ?>" alt="" style="padding-right: 10px;max-width: 150px;border-right: 1px solid #e0e0e0;margin-right: 20px;">
                             <img src="application/views/ali-abdullah.png" style="max-width: 150px;">
                         </a>

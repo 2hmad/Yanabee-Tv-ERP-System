@@ -3,7 +3,7 @@
     <div class="container-fluid">
 
         <!-- LOGO -->
-        <a href="https://yanabee.tv/" class="topnav-logo" style = "min-width: unset;">
+        <a href="https://www.yanabee-academy.com/" class="topnav-logo" style = "min-width: unset;">
             <span class="topnav-logo-lg">
                 <img src="<?php echo $this->settings_model->get_logo_light(); ?>" alt="" height="40">
             </span>
@@ -97,7 +97,7 @@
     </a>
     <div class="visit_website">
         <h4 style="color: #fff; float: left;"> <?php echo get_settings('system_name'); ?></h4>
-        <a href="https://yanabee.tv/" target="" class="btn btn-outline-light ml-3"><?php echo get_phrase('visit_website'); ?></a>
+        <a href="https://www.yanabee-academy.com/" target="" class="btn btn-outline-light ml-3"><?php echo get_phrase('visit_website'); ?></a>
         <img  class="hidden content-placeholder" src="<?php echo base_url('assets/backend/images/loader.gif'); ?>" alt="" height="35px;">
     </div>
 </div>
