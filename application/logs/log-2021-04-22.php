@@ -13,3 +13,4 @@ ERROR - 2021-04-22 00:00:05 --> Query error: Access denied for user 'yanabee'@'l
 FROM `settings`
 WHERE `id` = 1
 ERROR - 2021-04-22 00:00:05 --> Severity: error --> Exception: Call to a member function row_array() on bool C:\xampp\htdocs\yanabee\application\helpers\common_helper.php 15
+ERROR - 2021-04-22 01:24:58 --> 404 Page Not Found: Home/index
