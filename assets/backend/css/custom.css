@@ -482,13 +482,13 @@ i.material-icons {
   cursor: pointer;
 }
 .topnav-navbar-dark {
-  background: #14296c !important;
+  background: #d29429 !important;
 }
 .topnav-navbar-dark .nav-user {
   background-color: transparent !important;
   border-color: transparent !important;
 }
 thead tr {
-  background-color: #14296c !important;
+  background-color: #d29429 !important;
   color: white !important;
 }

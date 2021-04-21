@@ -2468,8 +2468,8 @@ fieldset:disabled a.btn {
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #1164ff;
-  border-color: #045cff;
+  background-color: #f19c09;
+  border-color: #f19c09;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -16768,8 +16768,8 @@ button:focus {
 }
 
 .btn-primary:hover {
-  background-color: #377dff;
-  border-color: #377dff;
+  background-color: #f19c09;
+  border-color: #f19c09;
 }
 
 /* secondary button :hover, :focus, :active effects */

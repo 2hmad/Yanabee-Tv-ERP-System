@@ -1,5 +1,5 @@
 <!-- Topbar Start -->
-<div class="navbar-custom topnav-navbar topnav-navbar-dark">
+<div class="navbar-custom topnav-navbar topnav-navbar-dark" style="background-color: #D29429 !important;">
     <div class="container-fluid">
 
         <!-- LOGO -->
@@ -15,7 +15,7 @@
         <ul class="list-unstyled topbar-right-menu float-right mb-0">
           <?php if ($this->session->userdata('user_type') == 'superadmin'): ?>
               <li class="dropdown notification-list">
-                  <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false" onclick="getLanguageList()">
+                  <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" style="color:white" aria-haspopup="false" aria-expanded="false" onclick="getLanguageList()">
                       <i class="mdi mdi-translate noti-icon"></i>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-lg">
@@ -41,11 +41,11 @@
                     <img src="<?php echo $this->user_model->get_user_image($this->session->userdata('user_id')); ?>" alt="user-image" class="rounded-circle">
                 </span>
                 <span>
-                    <span class="account-user-name"><?php echo $user_name; ?></span>
+                    <span class="account-user-name" style="color:white"><?php echo $user_name; ?></span>
                     <?php if (strtolower($this->db->get_where('users', array('id' => $user_id))->row('role')) == 'admin'): ?>
-                        <span class="account-position"><?php echo get_phrase('school_admin'); ?></span>
+                        <span class="account-position" style="color:white"><?php echo get_phrase('school_admin'); ?></span>
                     <?php else: ?>
-                        <span class="account-position"><?php echo ucfirst($this->db->get_where('users', array('id' => $user_id))->row('role')); ?></span>
+                        <span class="account-position" style="color:white"><?php echo ucfirst($this->db->get_where('users', array('id' => $user_id))->row('role')); ?></span>
                     <?php endif; ?>
 
                 </span>

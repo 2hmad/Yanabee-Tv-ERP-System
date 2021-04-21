@@ -16,9 +16,13 @@
     <!--Notify for ajax-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 <style>
+    .login {
+    background-color: #D29429 !important;
+    border-color: #D29429 !important;
+    }
     .login:hover {
-    background-color: #bd2765 !important;
-    border-color: #bd2765 !important;
+    background-color: #f3ac31 !important;
+    border-color: #f3ac31 !important;
     }
 </style>
 </head>
